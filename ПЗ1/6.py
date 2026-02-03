@@ -1,7 +1,7 @@
 arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1]
 
 def bin_search(arr, n):
-    left, right = 0, len(arr)
+    left, right = 0, len(arr)-1
     while left < right:
         middle = (left + right) // 2
         if arr[middle] < n:
