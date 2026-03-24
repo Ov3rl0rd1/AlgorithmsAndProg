@@ -2,7 +2,7 @@ arr = [38, 27, 43, 3, 9, 82]
 
 def print_step(prefix, depth, lst):
     indent = '  ' * depth
-    print(f"{indent}{prefix}: {lst}")
+    print(f"{depth}.{indent}{prefix}: {lst}")
 
 
 def quick_sort(a, depth=0):

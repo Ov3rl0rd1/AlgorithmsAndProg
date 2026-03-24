@@ -14,10 +14,13 @@ import numpy as np
 import random
 from typing import List, Any
 
+maxDepth = 0
 
 def _print_step(prefix: str, depth: int, lst: List[Any]):
-	indent = '  ' * depth
-	print(f"{indent}{prefix}: {lst}")
+    global maxDepth
+    indent = '  ' * depth
+    maxDepth = max(depth, maxDepth)
+    print(f"{indent}{prefix}: {lst}")
 
 
 def quick_sort(arr: List[int], *, pivot_type: str = 'middle', ascending: bool = True, visualize: bool = True, depth: int = 0) -> List[int]:
@@ -121,10 +124,13 @@ with open('sorting_results.txt', 'w') as f:
         f.write(f'=== Test: {name} size={len(arr)} ===\n')
         f.write(f'Input: {arr}\n\n')
         f.write('-- Quick Sort (pivot=first, ascending) --\n')
-        qs1 = quick_sort(arr, pivot_type='first', ascending=True, visualize=False)
+        qs1 = quick_sort(arr, pivot_type='first', ascending=True, visualize=True)
+        f.write(f"Rec Depth {maxDepth}\n")
         f.write(f'Result quick_sort (first, asc): {qs1}\n\n')
         f.write('-- Quick Sort (pivot=random, descending) --\n')
-        qs_rand = quick_sort(arr, pivot_type='random', ascending=False, visualize=False)
+        maxDepth = 0
+        qs_rand = quick_sort(arr, pivot_type='random', ascending=False, visualize=True)
+        f.write(f"Rec Depth {maxDepth}\n")
         f.write(f'Result quick_sort (random, asc): {qs_rand}\n\n')
         f.write('-- Merge Sort (ascending) --\n')
         ms = merge_sort(arr, ascending=True, visualize=False)

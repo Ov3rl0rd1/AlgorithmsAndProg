@@ -1,25 +1,20 @@
 arr = [-5, -3, -1, 0, 2, 4, 6]
 
 def sort_by_absolute(arr):
-    if len(arr) <= 1:
-        return arr
-    mid = len(arr) // 2
-    left = sort_by_absolute(arr[:mid])
-    right = sort_by_absolute(arr[mid:])
+    left = 0
+    right = len(arr)-1
     
-    merged = []
-    i = j = 0
-    while i < len(left) and j < len(right):
-        if abs(left[i]) < abs(right[j]):
-            merged.append(left[i])
-            i += 1
+    result = []
+    
+    while left <= right:
+        if abs(arr[left]) < abs(arr[right]):
+            result.append(arr[left])
+            left += 1
         else:
-            merged.append(right[j])
-            j += 1
-    merged.extend(left[i:])
-    merged.extend(right[j:])
+            result.append(arr[right])
+            right -= 1
     
-    return merged
+    return result
 
 sorted_arr = sort_by_absolute(arr)
 print(sorted_arr)
