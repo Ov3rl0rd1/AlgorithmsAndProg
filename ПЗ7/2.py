@@ -21,4 +21,4 @@ def group_duplicate_files(directory):
 
     return duplicates
 
-print(group_duplicate_files("C:\\Users\\nrbud\\Desktop\\AlgorithmsAndProg\\ПЗ7\\Директория_1"))
+print(group_duplicate_files("C:\\Users\\nrbud\\Desktop\\AlgorithmsAndProg\\7\\Директория_1"))

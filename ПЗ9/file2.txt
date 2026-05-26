@@ -1,0 +1,3 @@
+Programming is an important skill in modern world.
+Machine learning is a subset of artificial intelligence.
+Python programming is widely used in industry.

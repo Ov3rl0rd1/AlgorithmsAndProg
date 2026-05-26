@@ -30,4 +30,4 @@ def check_duplicate_file(file_path, directory):
 
     return file_hash in duplicates
 
-print(check_duplicate_file("C:\\Users\\nrbud\\Desktop\\AlgorithmsAndProg\\ПЗ7\\Директория_1\\ПЗ №9.docx", "C:\\Users\\nrbud\\Desktop\\AlgorithmsAndProg\\ПЗ7\\Директория_1"))
+print(check_duplicate_file("C:\\Users\\nrbud\\Desktop\\AlgorithmsAndProg\\7\\Директория_1\\6.py", "C:\\Users\\nrbud\\Desktop\\AlgorithmsAndProg\\7\\Директория_1"))

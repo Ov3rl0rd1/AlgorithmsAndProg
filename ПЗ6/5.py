@@ -116,7 +116,7 @@ class SingleProcessorSystem:
         print(f"Заявка {request_id} добавлена в очередь")
     
     def process_all_requests(self):
-        print(f"\nНачало обработки заявок (время обработки одной: {self.processor_time} сек)\n")
+        print(f"\nНачало обработки заявок\n")
         
         while not self.queue.is_empty():
             request_id = self.queue.dequeue()
@@ -125,7 +125,7 @@ class SingleProcessorSystem:
             print(f"+ Заявка {request_id} обработана")
 
 
-system = SingleProcessorSystem(processor_time=1.0)
+system = SingleProcessorSystem()
 
 print("\nДобавление заявок в очередь:")
 for i in range(1, 11):

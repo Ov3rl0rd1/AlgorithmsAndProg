@@ -28,6 +28,4 @@ register_user("user5", "password5", user_db)
 print(authenticate_user("user1", "password1", user_db))
 print(authenticate_user("user2", "wrong_password", user_db))
 
-print(user_db)
-
 print(authenticate_user(input("Login:"), input("Password:"), user_db))
