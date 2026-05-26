@@ -1,9 +1,6 @@
 #Задача № 6*
 #Решите Задачу № 4, используя собственное множество из задачи № 5.
 
-# Импортируем класс CustomSet из задачи 5
-# Если нужно запустить этот файл отдельно, скопируем класс здесь
-
 class CustomSet:
     def __init__(self):
         self.hash_table = {i: [] for i in range(10)}
@@ -55,6 +52,14 @@ class CustomSet:
         for key in range(10):
             all_elements.extend(self.hash_table[key])
         return f"CustomSet({sorted(all_elements)})"
+    
+    def get_all_elements(self) -> list:
+        all_elements = []
+        for key in range(10):
+            all_elements.extend(self.hash_table[key])
+            
+        return all_elements
+        
 
 
 def find_pair_sum_custom_set(sequence, target_sum):
@@ -112,7 +117,6 @@ print(f"Результат: {result1}")
 print()
 
 print("Тест: Нет решения")
-print("=" * 60)
 sequence3 = [1, 2, 3, 4, 5]
 target3 = 100
 result3 = find_pair_sum_custom_set(sequence3, target3)

@@ -23,8 +23,8 @@ def get_words_from_file(filename):
         return set()
 
 
-file1_words = get_words_from_file('file1.txt')
-file2_words = get_words_from_file('file2.txt')
+file1_words = get_words_from_file('C:\\Users\\nrbud\\Desktop\\AlgorithmsAndProg\\ПЗ9\\file1.txt')
+file2_words = get_words_from_file('C:\\Users\\nrbud\\Desktop\\AlgorithmsAndProg\\ПЗ9\\file2.txt')
     
 print("1. Уникальные слова в файле 1:")
 print(f"   Множество: {sorted(file1_words)}")
